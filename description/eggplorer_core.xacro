@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <link
+    name="base_footprint">
+    <inertial>
+      <origin
+        xyz="0.15521 0.0047713 0.11239"
+        rpy="0 0 0" />
+      <mass
+        value="13.197" />
+      <inertia
+        ixx="0.30179"
+        ixy="-0.0077769"
+        ixz="0.031851"
+        iyy="0.35574"
+        iyz="0.002234"
+        izz="0.407" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/base_footprint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.27843 0.83922 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/base_footprint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rueda_der">
+    <inertial>
+      <origin
+        xyz="0 8.3102E-05 2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.46272" />
+      <inertia
+        ixx="0.00047803"
+        ixy="4.5691E-23"
+        ixz="4.6062E-21"
+        iyy="0.00083062"
+        iyz="-2.4628E-18"
+        izz="0.00047803" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/rueda_der.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/rueda_der.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda_der_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.201 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="rueda_der" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="polea_der">
+    <inertial>
+      <origin
+        xyz="0 8.3102E-05 2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.46272" />
+      <inertia
+        ixx="0.00047803"
+        ixy="9.4852E-21"
+        ixz="-4.5944E-21"
+        iyy="0.00083062"
+        iyz="-2.4628E-18"
+        izz="0.00047803" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/polea_der.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/polea_der.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="polea_der_joint"
+    type="continuous">
+    <origin
+      xyz="0.245 -0.201 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="polea_der" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rueda_izq">
+    <inertial>
+      <origin
+        xyz="0 -8.3102E-05 2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.46272" />
+      <inertia
+        ixx="0.00047803"
+        ixy="3.4841E-23"
+        ixz="4.6008E-21"
+        iyy="0.00083062"
+        iyz="-5.3899E-22"
+        izz="0.00047803" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/rueda_izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/rueda_izq.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda_izq_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.201 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="rueda_izq" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="polea_izq">
+    <inertial>
+      <origin
+        xyz="0 -8.3102E-05 2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.46272" />
+      <inertia
+        ixx="0.00047803"
+        ixy="-6.275E-21"
+        ixz="9.1986E-21"
+        iyy="0.00083062"
+        iyz="-5.3899E-22"
+        izz="0.00047803" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/polea_izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eggplorer/meshes/polea_izq.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="polea_izq_joint"
+    type="continuous">
+    <origin
+      xyz="0.245 0.201 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="polea_izq" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
